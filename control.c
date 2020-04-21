@@ -1018,7 +1018,7 @@ int control_finish (struct tunnel *t, struct call *c)
         if (c->lns->pass_peer)
         {
             po = add_opt (po, "ipparam");
-            #po = add_opt (po, IPADDY (t->peer.sin_addr));
+            //old version code here: po = add_opt (po, IPADDY (t->peer.sin_addr));
             po = add_opt (po, c->dialing);
             /*dialing pass to the ppp, to get an valid ip from AAA.*/
             l2tp_log(LOG_INFO, "——> dailing number: %s\n", c->dialing);
